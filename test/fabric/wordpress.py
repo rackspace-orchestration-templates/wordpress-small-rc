@@ -7,9 +7,6 @@ import socket
 def check():
     env.platform_family = detect.detect()
 
-    assert file.exists('/var/www/vhosts/example.com/httpdocs/xmlrpc.php'),\
-        'xmlrpc.php did not exist'
-
     assert port.is_listening(80), 'port 80/nginx is not listening'
 
     if (env.platform_family == "rhel"):
@@ -24,9 +21,7 @@ def check():
         assert service.is_enabled('php5-fpm'), 'php-fpm is not enabled'
 
     if ("secondary" not in socket.gethostname()):
-        assert process.is_up('lsyncd'), 'lsyncd is not running'
         assert service.is_enabled('lsyncd'), 'lsyncd is not enabled'
-
 
     assert http_check('http://localhost/', 'Powered by WordPress')
 
