@@ -5,6 +5,7 @@ application-version: latest
 flavor: Production - RCv3
 flavor-weight: 2
 popularity: 2
+rackconnect: true
 reach-info:
   tattoo: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/wordpress-tattoo.png
   icon-20x20: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/wordpress-icon-20x20.png
@@ -128,7 +129,7 @@ instructions: |
   make sure that you DO NOT change the "database_flavor" and "database_disk"
   parameters, as this will result in the loss of all data within the
   database.
-  
+
   This stack will not ensure that WordPress or the servers themselves are
   up-to-date.  You are responsible for ensuring that all software is
   updated.
