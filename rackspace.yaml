@@ -3,7 +3,7 @@ application-family: CMS
 application-name: WordPress
 application-version: latest
 flavor: Production - RCv3
-flavor-weight: 2
+flavor-weight: 1
 popularity: 2
 rackconnect: true
 reach-info:
